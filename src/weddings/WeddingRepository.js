@@ -25,6 +25,7 @@ class WeddingRepository extends CRUD {
 
 }
 
+
 module.exports = {
     WeddingRepository: WeddingRepository
 };

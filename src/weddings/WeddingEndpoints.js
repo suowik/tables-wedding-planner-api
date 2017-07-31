@@ -5,10 +5,11 @@ class WeddingEndpoints extends Endpoints {
         this.routes = this.registerRoute((router, repository) => {
             router.post('/update', (req, res) => {
                 repository.update(req.body)
-                    .then(hunting => {
-                        res.sendStatus(200)
+                    .then(wedding => {
+                        res.json(wedding)
                     })
                     .catch(err => {
+                        console.log(err)
                         res.sendStatus(500)
                     })
             })
